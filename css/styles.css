@@ -15,6 +15,10 @@ textarea {
   font-size: 100%;
 }
 
+ul {
+  list-style: none;
+}
+
 /* 
 When the browser is smaller than 960px your menu must change from a full menu to a mobile or hamburger menu. When you click on that hamburger it will open to show all the links
 */
@@ -55,6 +59,59 @@ body {
   width: 85%;
 }
 
+.figure-component {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.figure-component img {
+  display: block;
+  border-radius: 0 0 0 0.375rem;
+}
+
+.figure-image-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  background-image: linear-gradient(rgba(255, 20, 147, 0.3), rgba(0, 0, 0, 0.5));
+  border-radius: 0.375rem 0 0 0;
+}
+
+.figure-title {
+  color: #ff1493;
+  font-size: 1rem;
+}
+
+.card-vertical, .card {
+  border-radius: 0.375rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+  display: flex;
+  gap: 1rem;
+  max-width: 30rem;
+}
+
+.card {
+  background-color: #000;
+  color: #ff1493;
+}
+
+.card-vertical {
+  flex-direction: column;
+}
+
+.card-body {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-text-label {
+  font-weight: bold;
+}
+
 .hero {
   background-image: linear-gradient(rgba(255, 20, 147, 0.3), rgba(255, 20, 147, 0.3)), url("../images/hero.jpg");
   background-size: cover;
@@ -83,86 +140,13 @@ body {
   font-style: italic;
 }
 
-/* 
-  Your browse page will display a photo gallery with a description to the right of the image. The images must be at least 200 x 200 and the description must be 150 x 200. You must have at least 10 images with descriptions and they must line up in a grid pattern and be spaced equally. 
-*/
 .gallery .cards {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 0.75rem;
 }
-.gallery .cards .card-holder {
-  margin-bottom: 2rem;
-}
-.gallery .cards .card-holder .card {
-  margin-bottom: 1rem;
-  border-radius: 0.375rem;
-  display: flex;
-  flex-direction: column;
-  font-size: 0.8rem;
-}
-.gallery .cards .card-holder .card .image-holder {
-  position: relative;
-}
-.gallery .cards .card-holder .card .image-holder img {
-  border-radius: 1.875rem;
-  height: 200px;
-  width: 200px;
-}
-.gallery .cards .card-holder .card .image-holder .btn-overlay {
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-}
-.gallery .cards .card-holder .card .image-holder .button-holder {
-  display: none;
-  gap: 0.5rem;
-}
-.gallery .cards .card-holder .card .image-holder .button-holder .btn, .gallery .cards .card-holder .card .image-holder .button-holder .btn--round {
-  cursor: pointer;
-}
-.gallery .cards .card-holder .card .image-holder:hover .btn-overlay {
-  display: block;
-}
-.gallery .cards .card-holder .card .image-holder:hover .button-holder {
-  display: flex;
-}
-.gallery .cards .card-holder .card .card-body {
-  background-color: #fff;
-  width: 150px;
-  height: 200px;
-  border-radius: 1.875rem;
-  padding: 0.75rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  overflow: hidden;
-}
-.gallery .cards .card-holder .card .card-body .card-title {
-  color: #ff1493;
-}
-.gallery .cards .card-holder .card .card-body .card-text {
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: normal;
-  word-wrap: break-word;
-}
 
-@media only screen and (max-width: 960px) {
-  .gallery .cards .card-holder .card .image-holder .btn-overlay {
-    display: block;
-  }
-  .gallery .cards .card-holder .card .image-holder .button-holder {
-    display: flex;
-  }
-}
 .btn, .btn--round {
   display: flex;
   align-items: center;
