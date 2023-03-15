@@ -1,4 +1,4 @@
-import { games } from "./data/games.js";
+import { GAMES } from "./data/games.js";
 
 import {
   homeView,
@@ -10,7 +10,7 @@ import {
 const titleBase = "DevConnect";
 
 const routes = {
-  home: galleryView(games),
+  home: galleryView(GAMES),
   // create: userProfileView(),
   // edit: userProfileView(users[0], true),
   // login: loginView(),
